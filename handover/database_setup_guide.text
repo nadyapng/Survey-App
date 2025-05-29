@@ -1,0 +1,77 @@
+1. Install MySQL on the New Machine
+First, ensure that MySQL is installed on the new machine where you want to set up the database.
+
+For Ubuntu/Linux:
+
+bash
+Copy code
+sudo apt update
+sudo apt install mysql-server
+For Windows: Download and install MySQL from the official website: MySQL Installer for Windows.
+
+2. Copy the schema.sql File to the New Server
+Transfer the schema.sql file you created to the new server. You can use scp, a USB drive, or any other file transfer method depending on the OS.
+
+For example, using scp (on Linux/MacOS):
+
+bash
+Copy code
+scp C:\Users\Administrator\Downloads\schema.sql user@remote_server_ip:/path/to/destination
+3. Create an Empty Database on the New Server
+On the new server, log in to MySQL and create an empty database where you'll import the schema.
+
+Login to MySQL:
+
+bash
+Copy code
+mysql -u root -p
+Create a new empty database:
+
+sql
+Copy code
+CREATE DATABASE surveydb_new;
+4. Import the Schema into the New Database
+Now, you can import the schema.sql file into the new database you just created.
+
+Exit the MySQL prompt and run the following command from the terminal/command prompt to import the schema:f
+
+bash
+Copy code
+mysql -u root -p surveydb_new < /path/to/schema.sql
+You’ll be prompted for the root password, and MySQL will import the schema into surveydb_new.
+
+5. Verify the Database on the New Server
+After the import completes, you can verify that the schema was successfully imported by logging into MySQL and checking the tables:
+
+Login to MySQL:
+
+bash
+Copy code
+mysql -u root -p
+Select the new database:
+
+sql
+Copy code
+USE surveydb_new;
+List the tables:
+
+sql
+Copy code
+SHOW TABLES;
+
+
+bash
+Copy code
+mysqldump -u debug -p surveydb > surveydb_with_data.sql
+Then, follow the same steps above but use the surveydb_with_data.sql file for the import to the new server.
+
+Summary of Steps:
+Install MySQL on the new machine.
+Copy the schema.sql file to the new machine.
+Create a new database on the new server.
+Import the schema using mysql command-line tool.
+Verify that the schema is correctly imported.
+
+
+Afterr the setup of MySQL database, please remember your root and password.
+Change the server ip port and account locate in server/database/db.js to your own database

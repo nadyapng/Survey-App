@@ -1,0 +1,120 @@
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 50px;
+}
+
+
+
+.input-group {
+    width: 100%; /* Ensures the input takes full available width */
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+.input-group textarea,
+.input-group input {
+    width: 800px;
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: vertical;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.input-group textarea:focus,
+.input-group input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.clear-button {
+    background-color: transparent;
+    border: none;
+    color: #007BFF;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+    height: fit-content;
+}
+
+.clear-button:hover {
+    color: #0056b3;
+}
+
+.submit-button {
+    grid-column: span 2; /* Ensures the submit button spans both columns */
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+}
+
+@media (max-width: 800px) {
+    form {
+        grid-template-columns: 1fr; /* Stack the input groups on smaller screens */
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+}
+
+.input-group.required::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: red; /* Circle color */
+    opacity: 50%;
+    border-radius: 50%;
+    position: absolute;
+    left: -15px;
+    top: 5px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.question-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}

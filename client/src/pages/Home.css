@@ -1,0 +1,34 @@
+.form-container-back {
+    background: linear-gradient(to bottom, #E6F2FF, #FFFFFF); /* Smooth gradient background */
+    padding: 20px;
+    border-radius: 16px; /* Softer corner radius for a modern look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* More pronounced shadow for depth */
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    z-index: 0; /* Keep form content on top of background elements */
+}
+
+
+.form-decor {
+    position: absolute;
+    top: 50px; /* Adjust for decoration placement */
+    right: -20px; /* Decoration slightly off the edge */
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at center, #FFDDC1 20%, transparent 50%);
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+.form-decor-2 {
+    position: absolute;
+    bottom: -50px; /* Place another decoration below the form */
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle at center, #BEE3F8 20%, transparent 60%);
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.6;
+}

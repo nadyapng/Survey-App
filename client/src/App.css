@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400; /* Default font weight */
+}
+
+.App {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400; /* Default font weight */
+  text-align: center;
+  background: linear-gradient(to bottom, #E6F2FF, #FFFFFF);
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500; /* Slightly bolder headings */
+}
+
+.nav-link, button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+/* Temporarily removed this class */
+.App-header { 
+  background-color: #282C34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61DAFB;
+  font-weight: 600; /* Slightly bolder for links */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #282C34;
+  padding: 1rem;
+  
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-link {
+  color: #61DAFB;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  
+}
+
+
+.input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #CCC;
+  margin-bottom: 1rem;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #61DAFB;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.App button {
+  background-color: #61DAFB;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Spinner styles */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Overlay styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensures the overlay is on top of other elements */
+}
+
+/* Modal content styles */
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto; /* Adds scroll if content exceeds modal height */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+li {
+  list-style-type: none;
+}
+
+.form-container {
+  width: 100%; /* Full width */
+  max-width: 800px; /* Set maximum width */
+  margin: auto; /* Center align */
+}
+
+
+
+.clear-button {
+  background-color: #61DAFB; /* Background color for clear button */
+  color: white; /* Text color for clear button */
+  border: none; /* No border */
+  padding: 5px 10px; /* Padding inside the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 0.9em; /* Font size for button text */
+  border-radius: 3px; /* Rounded corners for button */
+}
+
+.clear-button:hover {
+  opacity: 0.8; /* Opacity effect on hover */
+}
+
+.submit-button {
+  background-color: #61DAFB; /* Background color for submit button */
+  color: white; /* Text color for submit button */
+  border: none; /* No border */
+  padding: 10px 15px; /* Padding inside the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1em; /* Font size for button text */
+  border-radius: 5px; /* Rounded corners for button */
+  margin-top: 10px; /* Space above the button */
+}
+
+.submit-button:disabled {
+  background-color: gray; /* Background color when button is disabled */
+  cursor: not-allowed; /* Cursor style when button is disabled */
+}
+
+
+
+/* New stuff */
+
+/* Question Box Styling */
+.question-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adds space between input fields */
+}
+
+/* Styling for input fields */
+.input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  margin-bottom: 10px;
+}
+
+.input:focus {
+  border-color: #61DAFB;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Button Styling */
+.buttons-section {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #61DAFB;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4cafff;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Rearrange and delete buttons */
+.rearrange-controls button,
+.delete-choices {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.delete-choices:hover {
+  background-color: #ff7875;
+}
+
+/* Choice List Styling */
+.choices {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mcq-choices {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.mcq-choices input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+}
+
+

@@ -1,0 +1,39 @@
+.navbar {
+    background-color: #003366; /* Dark blue color */
+    padding: 20px 40px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #0059b3; /* Lighter blue on hover */
+    color: #fff; /* Keep white text on hover */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right .nav-item {
+    margin-left: 20px;
+}

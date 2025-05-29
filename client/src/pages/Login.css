@@ -1,0 +1,69 @@
+.form-container-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Full viewport height to center the form */
+    position: relative; /* Keep the form above the background */
+    z-index: 1; /* Ensure form stays on top */
+    padding: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 400px; /* Restrict form width */
+}
+
+.input-login {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #CCC;
+  display: block;
+  margin-bottom: 1rem;
+  width: 300px;
+}
+
+
+.submit-login {
+  background-color: #61DAFB; /* Background color for submit button */
+  color: white; /* Text color for submit button */
+  border: none; /* No border */
+  padding: 10px 15px; /* Padding inside the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1em; /* Font size for button text */
+  border-radius: 20px; /* Rounded corners for button */
+  margin-bottom: 20px; /* Space above the button */
+  width: 323px;
+}
+
+
+.login-background {
+    background-color: #003366;
+    position: absolute; /* Absolute positioning to keep it behind the form */
+    top: 50%; /* Start vertically centering from the middle of the screen */
+    left: 50%; /* Start horizontally centering from the middle of the screen */
+    transform: translate(-50%, -50%); /* Actually center the element */
+    z-index: 0; /* Keep it behind the form */
+    width: 100%;
+    border-radius: 10px; /* Rounded corners for button */
+    max-width: 440px; /* Match the max-width of the form */
+    height: calc(20vh + 10px); /* Height to cover the form and show 100px at the bottom */
+    margin-top: 100px; /* Show 100px of background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Full viewport height to center everything */
+    position: relative;
+}

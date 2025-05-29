@@ -1,0 +1,53 @@
+.dataVisualizationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.dataVisualizationSelectSurvey {
+  margin: 20px 0;
+}
+
+.dataVisualizationTableContainer {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.dataVisualizationTableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dataVisualizationTableContainer th,
+.dataVisualizationTableContainer td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #36A2EB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: #ccc;
+}
+
+.chartContainer {
+  margin-bottom: 40px;
+}
+
+.chartContainer h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}

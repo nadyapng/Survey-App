@@ -1,0 +1,8 @@
+.buttons-section {
+    display: flex;
+    gap: 20px; /* Adds 20px space between the buttons */
+    justify-content: center; /* Optional: center the buttons horizontally */
+    margin-top: 20px; /* Optional: adds space above the buttons section */
+    margin-bottom: 20px;
+}
+
